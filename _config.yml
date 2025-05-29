@@ -1,5 +1,14 @@
-title: Hacker theme
-description: Hacker is a theme for GitHub Pages.
-show_downloads: true
+title: Andy's secret kingdom
+description: Andy reigns this place
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-hacker
+collections:
+  projects:
+    output: true
+  about:
+    output: true
+  contact:
+    output: true
+  home:
+    output: true

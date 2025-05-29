@@ -1,6 +1,6 @@
 ---
-title: "From Healthy to Zombie - a VR zombie apocalypse take place in supermarket"
-link: "https://thereisnousername1.itch.io/from-healthy-to-zombie"
-image: "/assets/images/game1-cover.jpg"
-description: "Healthy or obese, that's a question."
+title: "Velocity Vortex - an exciting retro racing game developed with SDL2"
+link: "https://github.com/thereisnousername1/VelocityVortex"
+image: "/assets/images/game2-cover.jpg"
+description: "Vroom"
 ---

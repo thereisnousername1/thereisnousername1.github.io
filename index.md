@@ -99,7 +99,7 @@ body {
 </style>
 
 <div class="comic-title">Andy Iu's Secret Kingdom</div>
-<div class="comic-tagline">Supreme Student &mdash; Enter if you dare (or if you just like cool games and mysterious people)</div>
+<div class="comic-tagline">Supreme Student, currently(You can see my sense of humor here)</div>
 
 <div class="comic-container">
   <!-- Featured Project -->
@@ -110,40 +110,38 @@ body {
   </div>
 
   <!-- Projects -->
-  <div class="comic-box" onclick="window.location.href='projects.html'">
+  <div class="comic-box" onclick="window.location.href='projects'">
     <h2>🗂️ Projects</h2>
     <p>Explore my collection of game projects, prototypes, and experiments. Some are fun, some are weird, all are uniquely Andy.</p>
-    <a class="comic-link" href="projects.html">See Projects</a>
+    <a class="comic-link" href="projects">See Projects</a>
   </div>
 
   <!-- About -->
-  <div class="comic-box" onclick="window.location.href='about.html'">
+  <div class="comic-box" onclick="window.location.href='about'">
     <h2>🤔 About</h2>
-    <p>Who is Andy Iu? Supreme student, comic box enthusiast, and a bit of a mystery. If you want to define me, you'll have to try harder (or chat with ChatGPT for clues).</p>
-    <a class="comic-link" href="about.html">Learn More</a>
+    <p>Under construction</p>
+    <a class="comic-link" href="about">Learn More</a>
   </div>
 
   <!-- Contact -->
   <div class="comic-box" onclick="window.location.href='mailto:umtrfkr@gmail.com'">
-    <h2>📬 Contact</h2>
+    <h2>📬 Contact me via email: umtrfkr@gmail.com</h2>
     <p>Want to collaborate, chat, or send me cool stationery? Drop me a line!</p>
     <div class="comic-socials">
-      <a href="mailto:umtrfkr@gmail.com" title="Email">📧</a>
-      <a href="https://github.com/thereisnousername1" target="_blank" title="GitHub">🐙</a>
-      <a href="https://www.linkedin.com/in/andy-iu-349a3a348" target="_blank" title="LinkedIn">💼</a>
+      <a href="mailto:umtrfkr@gmail.com" title="Email">Email</a>
+      <a href="https://www.linkedin.com/in/andy-iu-349a3a348" target="_blank" title="LinkedIn">LinkedIn</a>
     </div>
   </div>
 
   <!-- Mystery Box -->
-  <div class="comic-box comic-mystery" onclick="alert('The mystery deepens... Try chatting with ChatGPT to define Andy!')">
-    <h2>❓ Mystery Box</h2>
-    <p>Can you define Andy Iu? Click here for a surprise, or just start a conversation. The adventure is yours!</p>
+  <div class="comic-box comic-mystery" onclick="alert('The mystery deepens... Under construction!')">
+    <h2>To my GitHub Page</h2>
+    <p>Want to see more of my projects?</p>
+    <div class="comic-socials">
+      <a href="https://github.com/thereisnousername1" target="_blank" title="GitHub">GitHub</a>
+    </div>
   </div>
 </div> 
-
-[Link to my GitHub](https://github.com/thereisnousername1).
-
-
 
 <!-- Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 

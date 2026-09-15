@@ -1,4 +1,5 @@
-// edit-me: swap in your real 6 games — title, one-line pitch, tags, and link.
+// games section
+
 const games = [
   {
     title: 'Hell of a Rescue',
@@ -6,6 +7,7 @@ const games = [
     tags: ['Multi-ending', '2.5D', 'Puzzle', 'backroom', 'ancient greek style', 'Rock'],
     link: 'https://vera-silva.itch.io/hell-of-a-rescue',
     color: 'var(--accent-amber)',
+    embed_link: 'https://itch.io/embed/4698547'
   },
   {
     title: 'Concrete Architects',
@@ -13,6 +15,7 @@ const games = [
     tags: ['Multi-ending', '3D', 'simulation', 'architecture', 'Cumbernauld'],
     link: 'https://renaissancestudios.itch.io/concrete-architects',
     color: 'var(--accent-teal)',
+    embed_link: 'https://itch.io/embed/4476181'
   },
   {
     title: "Baby's First Tower Defence",
@@ -20,6 +23,7 @@ const games = [
     tags: ['Multiplayer', '3D', '3rd person shooter', 'winter'],
     link: 'https://colranestudios.itch.io/babys-first-tower-defense',
     color: 'var(--accent-coral)',
+    embed_link: 'https://itch.io/embed/4109204'
   },
   {
     title: 'GoodBabies',
@@ -27,6 +31,7 @@ const games = [
     tags: ['Multi-ending', 'crime', 'card game', 'intense', 'fun'],
     link: 'https://colranestudios.itch.io/goodbabies',
     color: 'var(--accent-lilac)',
+    embed_link: 'https://itch.io/embed/4108940'
   },
   {
     title: 'From Healthy to Zombie',
@@ -34,6 +39,7 @@ const games = [
     tags: ['Zombie simulation', 'VR', 'shopping'],
     link: 'https://thereisnousername1.itch.io/from-healthy-to-zombie',
     color: 'var(--accent-amber)',
+    embed_link: 'https://itch.io/embed/3513355'
   },
   {
     title: 'Timelock',
@@ -41,6 +47,7 @@ const games = [
     tags: ['3D puzzle game', 'time limitation'],
     link: 'https://mockname.itch.io/timelock',
     color: 'var(--accent-teal)',
+    embed_link: 'https://itch.io/embed/3060964'
   },
 ]
 
@@ -50,16 +57,24 @@ export default function Games() {
       <div className="wrap">
         <div className="section-head">
           <h2>Games</h2>
-          <p>Six cartridges on the shelf — swap in your own titles, tags, and links.</p>
+          <p>Here are some of the games I have built individually or as part of a team. Details could be viewed in corresponding itch.io pages.</p>
         </div>
         <div className="shelf">
           {games.map((g, i) => (
+          
             <article className="cart" key={g.title} style={{ '--cart-color': g.color }}>
+
               <span className="cart-index">
                 {String(i + 1).padStart(2, '0')} / {String(games.length).padStart(2, '0')}
               </span>
+              
               <h3>{g.title}</h3>
+              
               <p>{g.pitch}</p>
+              
+              <iframe src={g.embed_link} width="552" height="167" frameborder="0">
+              </iframe>
+              
               <div className="cart-tags">
                 {g.tags.map((t) => (
                   <span className="tag" key={t}>
@@ -67,10 +82,13 @@ export default function Games() {
                   </span>
                 ))}
               </div>
-              <a className="cart-link" href={g.link}>
-                Play this game
+              
+              <a className="cart-link" href={g.link} target="blank">
+                Learn more
               </a>
+              
             </article>
+            
           ))}
         </div>
       </div>

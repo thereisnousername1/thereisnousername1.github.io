@@ -5,15 +5,13 @@ export default function Hero() {
         <div>
           <div className="hero-eyebrow-line">
             <span className="dot" />
-            Available for new projects
+            Looking for a career
           </div>
           <h1>
-            Building worlds people <span className="accent">want to get lost in.</span>
+            Building games people <span className="accent">wants to play.</span>
           </h1>
           <p className="lead">
-            I'm thereisnousername1, a game developer who has shipped and prototyped
-            six games — from tight arcade loops to systems-heavy experiments. This
-            is a shelf of what I've built.
+            I'm Andy Iu, a game developer who has shipped and prototyped some games and project — from 2.5D puzzler to VR simulation game. This is my portfolio website for what I've built.
           </p>
           <div className="hero-cta">
             <a className="btn btn-primary" href="#games">
@@ -28,23 +26,19 @@ export default function Hero() {
         <div className="hero-panel">
           <div className="row">
             <span>Role</span>
-            <span>Game Developer</span>
+            <span>Game Developer, junior technical artist(3D, shader)</span>
           </div>
           <div className="row">
-            <span>Games shipped</span>
-            <span>6</span>
+            <span>Tools</span>
+            <span>Unreal, Unity, 3Ds Max, Github, Blender(learning)</span>
           </div>
           <div className="row">
-            <span>Engine</span>
-            <span>edit-me</span>
-          </div>
-          <div className="row">
-            <span>Based in</span>
-            <span>edit-me</span>
+            <span>School</span>
+            <span>BSc degree in University of Plymouth, MProf degree in Abertay University</span>
           </div>
           <div className="row">
             <span>Status</span>
-            <span>Open to work</span>
+            <span>Looking for work</span>
           </div>
         </div>
       </div>

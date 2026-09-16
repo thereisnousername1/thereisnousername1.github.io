@@ -14,10 +14,10 @@ export default function Hero() {
             I'm Andy Iu, a game developer who has shipped and prototyped some games and project — from 2.5D puzzler to VR simulation game. This is my portfolio website for what I've built.
           </p>
           <div className="hero-cta">
-            <a className="btn btn-primary" href="#games">
+            <a class="btn btn-primary" href="#/#games">
               Browse the games
             </a>
-            <a className="btn btn-ghost" href="#contact">
+            <a class="btn btn-ghost" href="#/#contact">
               Get in touch
             </a>
           </div>

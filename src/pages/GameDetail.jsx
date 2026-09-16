@@ -21,8 +21,6 @@ export default function GameDetail() {
 
   // description係新加嘅optional欄位；未填嘅話就用返games.js已經有嘅pitch頂住，
   // 你之後想寫長啲嘅心得/技術細節，直接喺games.js加 description: '...' 就得。
-  
-  const description = game.description
 
   return (
     <>
@@ -46,7 +44,7 @@ export default function GameDetail() {
           
         </header>
 
-        {/* edit-me:喺games.js幫呢隻game加 cover: '/games/xxx.jpg' 就會喺度顯示 */}
+        {/* edit-me:喺games.js幫呢隻game加 cover: '/cover/xxx.jpg' 就會喺度顯示 */}
         {game.cover && <img src={game.cover} alt={game.title} className="detail-cover" />}
 
         <section className="detail-section">
@@ -65,8 +63,8 @@ export default function GameDetail() {
             <div className="cart-embed-wrap detail-embed-wrap">
               <iframe
                 src={game.embed_link}
-                width="552"
-                height="167"
+                width="1200"
+                height="180"
                 frameBorder="0"
                 title={`${game.title} itch.io embed`}
               />
@@ -74,11 +72,20 @@ export default function GameDetail() {
           </section>
         )}
 
-        {game.link && (
+        {(game.link || game.document_link) && (
           <section className="detail-section detail-links">
-            <a className="btn btn-primary" href={game.link}>
-              Play on itch.io
-            </a>
+            {game.link && (
+              <a className="btn btn-primary" href={game.link}>
+                Play on itch.io
+              </a>
+            )}
+            {/* edit-me:將檔案放喺 public/portfolios/ 度，再幫呢隻game加
+                downloadLink: '/portfolios/xxx.pdf' 就會自動出現呢個download掣 */}
+            {game.document_link && (
+              <a className="btn btn-ghost" href={game.document_link} download>
+                Download portfolio file
+              </a>
+            )}
           </section>
         )}
       </div>

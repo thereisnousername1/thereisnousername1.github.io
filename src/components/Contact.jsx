@@ -19,7 +19,7 @@ export default function Contact() {
               Itch.io
             </a>
             <a className="btn btn-primary"
-                href="#">Discord</a>
+                href="https://discordapp.com/users/459203320599543808">Discord</a>
           </div>
         </div>
       </div>

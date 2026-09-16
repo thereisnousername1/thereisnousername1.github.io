@@ -1,4 +1,6 @@
 // games section
+// embed_link: for itch.io iframe embedding
+// document_link: if there is portfolio for a product, put the document in public/documents folder
 
 // automatically generate slug from the title, e.g. "Hell of a Rescue" -> "hell-of-a-rescue"
 function slugify(text) {
@@ -18,7 +20,9 @@ const rawGames = [
     tags: ['Multi-ending', '2.5D', 'Puzzle', 'backroom', 'ancient greek style', 'Rock'],
     link: 'https://vera-silva.itch.io/hell-of-a-rescue',
     color: 'var(--accent-amber)',
-    embed_link: 'https://itch.io/embed/4698547'
+    embed_link: 'https://itch.io/embed/4698547',
+    document_link: '/documents/IuPakHungAndy_DES512_ReflectiveReport.pdf',
+    cover: '/cover/game1cover.jpg'
   },
   {
     title: 'Concrete Architects',
@@ -27,7 +31,8 @@ const rawGames = [
     tags: ['Multi-ending', '3D', 'simulation', 'architecture', 'Cumbernauld'],
     link: 'https://renaissancestudios.itch.io/concrete-architects',
     color: 'var(--accent-teal)',
-    embed_link: 'https://itch.io/embed/4476181'
+    embed_link: 'https://itch.io/embed/4476181',
+    cover: '/cover/game2cover.jpg'
   },
   {
     title: "Baby's First Tower Defence",
@@ -35,7 +40,8 @@ const rawGames = [
     tags: ['Multiplayer', '3D', '3rd person shooter', 'winter'],
     link: 'https://colranestudios.itch.io/babys-first-tower-defense',
     color: 'var(--accent-coral)',
-    embed_link: 'https://itch.io/embed/4109204'
+    embed_link: 'https://itch.io/embed/4109204',
+    cover: '/cover/game3cover.png'
   },
   {
     title: 'GoodBabies',

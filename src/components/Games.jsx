@@ -9,6 +9,8 @@ export default function Games() {
           <h2>Games</h2>
           <p>Here are some of the games I have developed individually or as part of a team. Details could be viewed on corresponding pages.</p>
         </div>
+
+        {/* each card */}
         <div className="shelf">
           {games.map((g, i) => (
             <article className="cart" key={g.slug} style={{ '--cart-color': g.color }}>

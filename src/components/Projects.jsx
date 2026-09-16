@@ -1,13 +1,21 @@
 // projects section
 const projects = [
   {
-    title: 'Hell of a Rescue',
-    pitch: '2.5D fixed view puzzler in an ancient greek styled building within 12 weeks, where I was incharge of 3D art.',
-    tags: ['Multi-ending', '2.5D', 'Puzzle', 'backroom', 'ancient greek style', 'Rock'],
-    link: 'https://vera-silva.itch.io/hell-of-a-rescue',
+    title: 'Da Vinci Gallery',
+    pitch: 'A trial 3D viewer developed with OpenGL 4.6 and SDL2, a gallery to preview different 3D models in various shading',
+    tags: ['OpenGL', 'C++', 'SDL2', 'phong-model', '3D model viewer'],
+    link: 'https://github.com/thereisnousername1/Davinci-Gallery',
     color: 'var(--accent-amber)',
+    cover: '/cover/project1cover.jpg'
   },
-  
+  {
+    title: 'Velocity Vortex',
+    pitch: 'An exciting retro racing game developed with SDL2.',
+    tags: ['C++', 'SDL2', 'scrolling background', 'smooth music'],
+    link: 'https://github.com/thereisnousername1/VelocityVortex',
+    color: 'var(--accent-amber)',
+    cover: '/cover/project2cover.jpg'
+  },
 ]
 
 export default function Projects() {
@@ -18,14 +26,22 @@ export default function Projects() {
           <h2>Projects</h2>
           <p>Here are some of the other projects I have built for practice use. Details could be viewed in corresponding GitHub pages.</p>
         </div>
+
+        {/* each card */}
         <div className="shelf">
           {projects.map((p, i) => (
             <article className="cart" key={p.title} style={{ '--cart-color': p.color }}>
+              
               <span className="cart-index">
                 {String(i + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
               </span>
+
+              {p.cover && <img src={p.cover} alt={p.title} className="cart-cover" />}
+              
               <h3>{p.title}</h3>
+
               <p>{p.pitch}</p>
+
               <div className="cart-tags">
                 {p.tags.map((t) => (
                   <span className="tag" key={t}>
@@ -33,9 +49,11 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+
               <a className="cart-link" href={p.link}>
-                Play this game
+                Learn more
               </a>
+
             </article>
           ))}
         </div>

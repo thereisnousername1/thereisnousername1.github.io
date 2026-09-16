@@ -16,6 +16,14 @@ const projects = [
     color: 'var(--accent-amber)',
     cover: '/cover/project2cover.jpg'
   },
+    {
+    title: 'Lab practices for OpenGL - Advanced',
+    pitch: 'A series of advanced lab practices to different OpenGL practices.',
+    tags: ['C++', 'SDL2', 'scrolling background', 'smooth music'],
+    link: 'https://github.com/thereisnousername1/LabsOpenGLAdvanced/tree/main',
+    color: 'var(--accent-amber)',
+    cover: '/cover/project3cover.jpg'
+  },
 ]
 
 export default function Projects() {

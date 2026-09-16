@@ -5,7 +5,7 @@ export default function About() {
         <div className="section-head">
           <h2>About</h2>
           <p>I am lucky enough to persue for higher level of education in games development after granting a chance to a full schlarship to 2 years of study.</p>
-          <p>I started studying games development from 2022 Sept 
+          <p>I started studying games development from 2022 September 
             and was lucky enough to be granted a 2 years full schlarship to support me studying in the same field in UK. By the end of 2025 academic year I am graduated from BSc(Hons) Computer Science(Games Development) in University of Plymouth. And by the end of 2026 academic year I have finished all the courses of MProf Games Development in Abertay University.</p>
         </div>
         <div>

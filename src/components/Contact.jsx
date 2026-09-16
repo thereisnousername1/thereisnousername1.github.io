@@ -18,8 +18,12 @@ export default function Contact() {
             <a className="btn btn-ghost" href="https://thereisnousername1.itch.io">
               Itch.io
             </a>
-            <a className="btn btn-primary"
-                href="https://discordapp.com/users/459203320599543808">Discord</a>
+            <a className="btn btn-primary" href="https://discordapp.com/users/459203320599543808">
+              Discord
+            </a>
+            <a className="btn btn-ghost" href="https://www.linkedin.com/in/andy-iu-349a3a348/">
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>

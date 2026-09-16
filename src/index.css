@@ -1,5 +1,8 @@
 /* ---------------------------------------------------------
-   67676767676767
+   Design tokens
+   Concept: a shelf of game cartridges, not a generic SaaS page.
+   Palette avoids the common near-black+neon or cream+terracotta
+   defaults — deep plum base with amber + teal cartridge accents.
 ----------------------------------------------------------- */
 :root {
   --bg: #1c1730;
@@ -215,12 +218,18 @@ button {
   font-family: var(--font-mono);
 }
 
+/* 由flex space-between改做grid兩欄：
+   label攞定寬度(78px)，value攞返剩低嘅空間自己換行——
+   先前用flex，value字一長就會逼晒去右邊、擠到自己包唔切行。 */
 .hero-panel .row {
-  display: flex;
-  justify-content: space-between;
-  padding: 11px 0;
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 12px 0;
   border-bottom: 1px dashed var(--line);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 
 .hero-panel .row:last-child {
@@ -233,6 +242,7 @@ button {
 
 .hero-panel .row span:last-child {
   color: var(--text);
+  text-align: left;
 }
 
 /* ---------------- Section shell ---------------- */
@@ -300,10 +310,13 @@ section {
   border-top: 1px solid var(--line);
 }
 
+/* 每行2張、置中：cart有個max-width上限，
+   grid欄闊唔會再逼到個embed iframe散晒。 */
 .shelf {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 560px));
+  justify-content: center;
+  gap: 24px;
 }
 
 .cart {
@@ -311,6 +324,7 @@ section {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 22px 22px 20px;
+  width: 100%;
   position: relative;
   border-top: 3px solid var(--cart-color, var(--accent-amber));
   transition: transform 0.15s ease, border-color 0.15s ease;
@@ -355,6 +369,21 @@ section {
   border: 1px solid var(--line);
   border-radius: 4px;
   padding: 3px 8px;
+}
+
+/* itch.io widget喺闊度細過大約500px會自己隱藏返個縮圖(呢個係itch自己嘅responsive行為，
+   唔係css問題)，所以呢度唔再逼iframe瘦身，改用一個可以左右scroll嘅wrapper包住，
+   保持iframe原本嘅552x167，窄屏靠掃動嚟睇，唔會再見到縮圖消失。 */
+.cart-embed-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 16px;
+  border-radius: 6px;
+}
+
+.cart-embed-wrap iframe {
+  display: block;
+  border: 0;
 }
 
 .cart-link {
@@ -432,4 +461,72 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+/* ---------------- Game detail page ---------------- */
+.detail-page {
+  padding: 40px 0 80px;
+  max-width: 760px;
+}
+
+.detail-back {
+  margin-bottom: 32px;
+}
+
+.detail-head {
+  border-top: 3px solid var(--cart-color, var(--accent-amber));
+  padding-top: 20px;
+  margin-bottom: 28px;
+}
+
+.detail-head h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 0 0 10px;
+}
+
+.detail-pitch {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  margin: 0 0 14px;
+}
+
+.detail-cover,
+.detail-video {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  margin-bottom: 32px;
+  display: block;
+}
+
+.detail-section {
+  margin-bottom: 32px;
+}
+
+.detail-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.detail-section p,
+.detail-section li {
+  color: var(--text-dim);
+}
+
+.detail-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.detail-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.detail-embed-wrap {
+  display: flex;
+  justify-content: center;
 }

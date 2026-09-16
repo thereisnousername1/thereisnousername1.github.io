@@ -4,7 +4,7 @@ export default function Contact() {
       <div className="wrap">
         <div className="contact-box">
           <div>
-            <h2>Contact me.</h2>
+            <h2>Contact me</h2>
             <p>Open to freelance work, collaborations, or a full-time role.</p>
           </div>
           <div className="contact-links">

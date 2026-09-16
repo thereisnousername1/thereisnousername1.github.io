@@ -20,7 +20,23 @@ npm run dev
 - `src/components/About.jsx` — 換成你自己嘅背景故仔。
 - `src/components/Contact.jsx` — 換返你真實嘅 email / GitHub / itch.io 連結。
 
-## 3. 部署到 GitHub Pages（`thereisnousername1.github.io`）
+## 3. 每隻game嘅詳情頁
+
+用咗 `react-router-dom` 做routing:
+
+- 所有game資料集中喺 `src/data/games.js`（唔使開多個file，加/改game都係喺呢個array入面做）
+- `src/pages/GameDetail.jsx` 係共用嘅detail頁，靠網址入面嘅slug（例如 `/games/game-title-one`）自動揾返對應資料嚟render
+- `src/components/Games.jsx` 個「查看詳情」掣用 `<Link to={...}>` 跳去detail頁 —— 呢個係關鍵：純HTML嘅 `<a href="../xxx.jsx">` 唔work，因為`.jsx`係source file唔係網址，一定要透過router library先可以「跳轉」
+- 用嘅係 `HashRouter`（網址會有個 `#`，例如 `.../#/games/game-title-one`），呢個部署去GitHub Pages唔使加額外設定就得。如果將來想要冇`#`嘅乾淨網址，要改用 `BrowserRouter`，並喺repo加一個 `404.html`（內容同`index.html`一樣）做fallback，唔然一整頁refresh會變404。
+
+**寫detail內容嘅建議格式**（`src/data/games.js` 入面每個game object都已經留咗對應欄位）:
+
+1. **Overview** —— 兩三句：呢隻game係咩、核心玩法
+2. **My role** —— 你實際做咗啲乜（唔好淨係寫「參與開發」，寫具體崗位/負責部分）
+3. **Technical highlights** —— 揀1-3個你解決過嘅具體技術難題，講你點解決，唔止寫用過咩engine
+4. **What I learned** —— 呢個project令你有咩得著，或者返轉頭會點做得唔同
+
+## 4. 部署到 GitHub Pages（`thereisnousername1.github.io`）
 
 因為個repo名要同你個username一樣，先至會自動變成用戶主頁：
 

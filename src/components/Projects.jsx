@@ -5,7 +5,7 @@ const projects = [
     pitch: 'A trial 3D viewer developed with OpenGL 4.6 and SDL2, a gallery to preview different 3D models in various shading',
     tags: ['OpenGL', 'C++', 'SDL2', 'phong-model', '3D model viewer'],
     link: 'https://github.com/thereisnousername1/Davinci-Gallery',
-    color: 'var(--accent-amber)',
+    color: '#d00000',
     cover: '/cover/project1cover.jpg'
   },
   {
@@ -13,7 +13,7 @@ const projects = [
     pitch: 'An exciting retro racing game developed with SDL2.',
     tags: ['C++', 'SDL2', 'scrolling background', 'smooth music'],
     link: 'https://github.com/thereisnousername1/VelocityVortex',
-    color: 'var(--accent-amber)',
+    color: '#00ff41',
     cover: '/cover/project2cover.jpg'
   },
     {
@@ -21,8 +21,8 @@ const projects = [
     pitch: 'A series of advanced lab practices to different OpenGL practices.',
     tags: ['C++', 'SDL2', 'scrolling background', 'smooth music'],
     link: 'https://github.com/thereisnousername1/LabsOpenGLAdvanced/tree/main',
-    color: 'var(--accent-amber)',
-    cover: '/cover/project3cover.jpg'
+    color: '#1060f0',
+    cover: '/cover/project3cover.jpeg'
   },
 ]
 

@@ -429,26 +429,69 @@ footer {
 }
 
 /* ---------------- Responsive ---------------- */
+
+/* Hamburger button：寬畫面(>860px)一直隱藏，本身唔影響desktop排版 */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
 @media (max-width: 860px) {
   .hero-grid,
   .about-grid {
     grid-template-columns: 1fr;
   }
-  .shelf {
-    grid-template-columns: 1fr 1fr;
+  .nav-toggle {
+    display: block;
   }
   .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 28px 18px;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+  }
+}
+
+/* itch embed(552px)喺700-860px嗰段2欄會逼到overflow，所以早啲收做1欄 */
+@media (max-width: 720px) {
+  .shelf {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 560px) {
-  .shelf {
-    grid-template-columns: 1fr;
+  .wrap {
+    padding: 0 18px;
+  }
+  .nav-inner {
+    padding: 14px 18px;
+  }
+  .nav-links {
+    padding: 12px 18px 18px;
   }
   .contact-box {
     flex-direction: column;
     align-items: flex-start;
+    padding: 28px;
   }
 }
 

@@ -22,7 +22,7 @@ const projects = [
     tags: ['C++', 'SDL2', 'scrolling background', 'smooth music'],
     link: 'https://github.com/thereisnousername1/LabsOpenGLAdvanced/tree/main',
     color: '#1060f0',
-    cover: '/cover/project3cover.mov'
+    cover: '/cover/project3cover.jpeg'
   },
 ]
 

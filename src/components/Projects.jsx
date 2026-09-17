@@ -44,8 +44,10 @@ export default function Projects() {
                 {String(i + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
               </span>
 
-              {p.cover && <img src={p.cover} alt={p.title} className="cart-cover" />}
-              
+              <a href={p.link}>
+                {p.cover && <img src={p.cover} alt={p.title} className="cart-cover" />}
+              </a>
+
               <h3>{p.title}</h3>
 
               <p>{p.pitch}</p>

@@ -23,7 +23,7 @@ const rawGames = [
     embed_link: 'https://itch.io/embed/4698547',
     document_link: '/documents/IuPakHungAndy_DES512_ReflectiveReport.pdf',
     cover: '/cover/game1cover.jpg',
-    images: ['/cover/game1cover.jpg', '/cover/game1cover.jpg'],
+    images: ['/cover/game1cover.jpg', '/cover/game1cover2.png', '/cover/game1cover3.png'],
     contributions: ['Modeled and optimized all 3D environment assets', 'Built a shared texture master material for efficient instancing', 'Reduced a 900k-triangle building to game-ready low-poly with normal mapping','']
   },
   {
@@ -34,7 +34,8 @@ const rawGames = [
     link: 'https://renaissancestudios.itch.io/concrete-architects',
     color: 'var(--accent-teal)',
     embed_link: 'https://itch.io/embed/4476181',
-    cover: '/cover/game2cover.jpg'
+    cover: '/cover/game2cover.jpg',
+    images: ['/cover/game2cover.jpg', '/cover/game2cover2.png'],
   },
   {
     title: "Baby's First Tower Defence",
@@ -53,7 +54,9 @@ const rawGames = [
     tags: ['Unreal', 'Multi-ending', 'crime', 'card game', 'intense', 'fun'],
     link: 'https://colranestudios.itch.io/goodbabies',
     color: 'var(--accent-lilac)',
-    embed_link: 'https://itch.io/embed/4108940'
+    embed_link: 'https://itch.io/embed/4108940',
+    cover: '/cover/game4cover.png',
+    images: ['/cover/game4cover.png', ''],
   },
   {
     title: 'From Healthy to Zombie',

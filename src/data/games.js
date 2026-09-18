@@ -22,7 +22,9 @@ const rawGames = [
     color: 'var(--accent-amber)',
     embed_link: 'https://itch.io/embed/4698547',
     document_link: '/documents/IuPakHungAndy_DES512_ReflectiveReport.pdf',
-    cover: '/cover/game1cover.jpg'
+    cover: '/cover/game1cover.jpg',
+    images: ['/cover/game1cover.jpg', '/cover/game1cover.jpg'],
+    contributions: ['Modeled and optimized all 3D environment assets', 'Built a shared texture master material for efficient instancing', 'Reduced a 900k-triangle building to game-ready low-poly with normal mapping','']
   },
   {
     title: 'Concrete Architects',

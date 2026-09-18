@@ -19,9 +19,21 @@ export default function Games() {
                 {String(i + 1).padStart(2, '0')} / {String(games.length).padStart(2, '0')}
               </span>
               
+              <Link className="cart-link" to={`/games/${g.slug}`}>
+                {g.cover && <img src={g.cover} alt={g.title} className="cart-cover" />}
+              </Link>
+
               <h3>{g.title}</h3>
               
               <p>{g.pitch}</p>
+
+              {g.contributions && g.contributions.length > 0 && (
+                <ul className="cart-contributions">
+                  {g.contributions.map((c, i) => (
+                    <li key={i}>{c}</li>
+                  ))}
+                </ul>
+              )}
               
               {g.embed_link && (
                 <div className="cart-embed-wrap">
@@ -35,7 +47,6 @@ export default function Games() {
                 </div>
               )}
 
-              
               <div className="cart-tags">
                 {g.tags.map((t) => (
                   <span className="tag" key={t}>

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import Nav from '../components/Nav.jsx'
 import { useParams, Link } from 'react-router-dom'
 import { games } from '../data/games.js'
@@ -22,6 +23,11 @@ export default function GameDetail() {
   // description係新加嘅optional欄位；未填嘅話就用返games.js已經有嘅pitch頂住，
   // 你之後想寫長啲嘅心得/技術細節，直接喺games.js加 description: '...' 就得。
 
+  // edit-me：想放好多張圖，喺games.js幫呢隻game加
+  //   images: ['/games/xxx-1.jpg', '/games/xxx-2.jpg', '/games/xxx-3.jpg']
+  // 冇加images嘅話，會自動fallback用返你已經填低嘅 cover（得返1張，唔會顯示左右掣）
+  const images = game.images && game.images.length > 0 ? game.images : game.cover ? [game.cover] : []
+
   return (
     <>
       <Nav />
@@ -45,7 +51,8 @@ export default function GameDetail() {
         </header>
 
         {/* edit-me:喺games.js幫呢隻game加 cover: '/cover/xxx.jpg' 就會喺度顯示 */}
-        {game.cover && <img src={game.cover} alt={game.title} className="detail-cover" />}
+        {/* game.cover && <img src={game.cover} alt={game.title} className="detail-cover" / */}
+        {images.length > 0 && <ImageGallery images={images} title={game.title} />}
 
         <section className="detail-section">
           <p>"{game.pitch}"</p>
@@ -90,5 +97,91 @@ export default function GameDetail() {
         )}
       </div>
     </>
+  )
+}
+
+// 獨立抽咗做一個小component，負責記住「而家睇緊第幾張相」同「彈出嗰張大圖有冇開」
+function ImageGallery({ images, title }) {
+  const [index, setIndex] = useState(0)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+
+  const prev = () => setIndex((i) => (i - 1 + images.length) % images.length)
+  const next = () => setIndex((i) => (i + 1) % images.length)
+
+  // 撳Escape都可以關返個lightbox
+  useEffect(() => {
+    if (!lightboxOpen) return
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setLightboxOpen(false)
+      if (e.key === 'ArrowLeft') prev()
+      if (e.key === 'ArrowRight') next()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [lightboxOpen])
+
+  return (
+    <div className="detail-gallery">
+      <img
+        src={images[index]}
+        alt={`${title} screenshot ${index + 1}`}
+        onClick={() => setLightboxOpen(true)}
+      />
+      {images.length > 1 && (
+        <>
+          <button className="gallery-btn prev" onClick={prev} aria-label="Previous image">
+            ‹
+          </button>
+          <button className="gallery-btn next" onClick={next} aria-label="Next image">
+            ›
+          </button>
+          <span className="gallery-counter">
+            {index + 1} / {images.length}
+          </span>
+        </>
+      )}
+
+      {lightboxOpen && (
+        <div className="lightbox-overlay" onClick={() => setLightboxOpen(false)}>
+          <button
+            className="lightbox-close"
+            onClick={() => setLightboxOpen(false)}
+            aria-label="Close preview"
+          >
+            ✕
+          </button>
+          <img
+            src={images[index]}
+            alt={`${title} screenshot ${index + 1} full size`}
+            className="lightbox-img"
+            onClick={(e) => e.stopPropagation()}
+          />
+          {images.length > 1 && (
+            <>
+              <button
+                className="gallery-btn prev"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  prev()
+                }}
+                aria-label="Previous image"
+              >
+                ‹
+              </button>
+              <button
+                className="gallery-btn next"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  next()
+                }}
+                aria-label="Next image"
+              >
+                ›
+              </button>
+            </>
+          )}
+        </div>
+      )}
+    </div>
   )
 }

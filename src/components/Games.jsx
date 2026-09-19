@@ -34,6 +34,8 @@ export default function Games() {
                   ))}
                 </ul>
               )}
+
+              <p><i>{g.quick_info}</i></p>
               
               {g.embed_link && (
                 <div className="cart-embed-wrap">

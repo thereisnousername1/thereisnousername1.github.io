@@ -4,13 +4,12 @@ export default function About() {
       <div className="wrap about-grid">
         <div className="section-head">
           <h2>About</h2>
-          <p>I am lucky enough to persue for higher level of education in games development after granting a chance to a full schlarship to 2 years of study.</p>
-          <p>I started studying games development from 2022 September 
-            and was lucky enough to be granted a 2 years full schlarship to support me studying in the same field in UK. By the end of 2025 academic year I am graduated from BSc(Hons) Computer Science(Games Development) in University of Plymouth. And by the end of 2026 academic year I have finished all the courses of MProf Games Development in Abertay University.</p>
-        </div>
-        <div>
-          <p>During studying the MProf degree it was a memorizable time. The course has an intense schedule divided in 3 weeks and we are grouped with different teammates to finish a game each term. I am glad to be able to collaborate with many talented people with similar background, but seeing things differently. My programming skills, 3D modelling techniques, abilities to perform version control with Github and knowledge to create and maintain shader has imporved alot. I am also more capable to collaborate with people being experienced in collboration with my teammates and different clients in this year.</p>
-          <p>In my free time I'm usually learning to use new tools, testing out how to improve my productivity with new techniques, and trying new games on the market.</p>
+          <p>I'm Andy Iu, a game developer specialising in 3D environment art and technical art.</p>
+          <p>I graduated with a BSc (Hons) Computer Science (Games Development) from the University of Plymouth and completed an MProf in Games Development at Abertay University. During my studies, I worked on multiple team projects across Unreal Engine and Unity, taking responsibility for 3D asset production, environment art, shaders, gameplay systems and technical implementation.</p>
+          <p>My main interests are the area between art and technology. I enjoy building 3D assets, optimising them for real-time use, developing materials and shaders in Unreal Engine, and connecting art assets with gameplay and level systems. I also have experience with GitHub-based version control, build integration and working with artists, designers and programmers in team environments.</p>
+          </div>
+        <div><p>I approach projects by looking for practical solutions to production constraints — whether that means reducing asset complexity, building reusable materials and modular assets, or implementing systems that allow the team to iterate more efficiently.</p>
+          <p>I'm currently looking for opportunities as a junior Technical Artist, Environment Artist, or Game Developer, where I can contribute to real-time 3D production while continuing to develop my technical and artistic skills.</p>
           
         </div>
       </div>

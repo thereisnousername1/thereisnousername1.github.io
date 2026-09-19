@@ -21,25 +21,28 @@ const rawGames = [
     link: 'https://vera-silva.itch.io/hell-of-a-rescue',
     color: 'var(--accent-amber)',
     embed_link: 'https://itch.io/embed/4698547',
-    document_link: '/documents/IuPakHungAndy_DES512_ReflectiveReport.pdf',
+    document_link: '/documents/Hell_of_a_rescue_reflective_report.pdf',
     cover: '/cover/game1cover.jpg',
     images: ['/cover/game1cover.jpg', 
              '/cover/game1cover2.png', 
              '/cover/game1cover3.png'],
-    contributions: ['I created the game’s environment, modelled and optimised all 3D assets.', 'Produced optimised assets with a target of fewer than 200 triangles per object.', 'Developed a reusable Unreal Engine master material with efficient mixed-texture support.', 'Converted a 900,000+ triangle building exterior into low-poly assets with normal mapping.', 'Collaborated with concept artist, animators and level designers to support the game’s visual direction and level integration.']
+    contributions: ['I created the game’s environment, modelled and optimised all 3D assets.', 'Produced optimised assets with a target of fewer than 200 triangles per object.', 'Developed a reusable Unreal Engine master material with efficient mixed-texture support.', 'Converted a 900,000+ triangle building exterior into low-poly assets with normal mapping.', 'Collaborated with concept artist, animators and level designers to support the game’s visual direction and level integration.'], 
+    quick_info: 'Team of 13 · Environment artist · Art direction had turned 3 times · 12 weeks'
   },
   {
     title: 'Concrete Architects',
     pitch: 'A building game set in 1960s Cumbernauld Town Centre. The player places interior and exterior buildings on a grid across four floors. Walls generate automatically when the design is submitted, and the layout affects the ending. The visuals mimic a hand-drafted architectural sketch.',
-    description: ["Concrete Architect is a team project with 5 other teammates. It was a game project collaborated with V&A Dundee, aimed at attracting more local tourists in Dundee DD2 and DD4 districts to the museum. We've picked a sketch of the old Cumbernauld Town Centre as our inspiration for the topic.", "I built the sketch-style look by combining an outline shader with four layers of cross-hatching on a yellow-brown paper background. I fixed the shader jitter by turning off anti-aliasing and disabling Nanite on every mesh. I modelled around 20 building types and 7 vehicles from books, photos and archive film, all built to fixed grid dimensions so they snap together. In Unreal Blueprints, I implemented the collision-based checks that decide where each building can be placed. These cover floor limits, entrance connections and overlaps. I also kept the asset list and building dimensions up to date, merged the team's work in GitHub, and packaged builds. At the deadline I worked with a teammate to cut the build size by more than half so we could submit.", "The finished game aimed to let players go back in time to rebuild the Cumbernauld Town Centre, as it was often criticised for its stark Brutalist architecture, confusing layout, and decline into a dysfunctional retail space."],
+    description: ["Concrete Architects is a team project with 5 other teammates. It was a game project collaborated with V&A Dundee, aimed at attracting more local tourists in Dundee DD2 and DD4 districts to the museum. We've picked a sketch of the old Cumbernauld Town Centre as our inspiration for the topic.", "I built the sketch-style look by combining an outline shader with four layers of cross-hatching on a yellow-brown paper background. I fixed the shader jitter by turning off anti-aliasing and disabling Nanite on every mesh. I modelled around 20 building types and 7 vehicles from books, photos and archive film, all built to fixed grid dimensions so they snap together. In Unreal Blueprints, I implemented the collision-based checks that decide where each building can be placed. These cover floor limits, entrance connections and overlaps. I also kept the asset list and building dimensions up to date, merged the team's work in GitHub, and packaged builds. At the deadline I worked with a teammate to cut the build size by more than half so we could submit.", "The finished game aimed to let players go back in time to rebuild the Cumbernauld Town Centre, as it was often criticised for its stark Brutalist architecture, confusing layout, and decline into a dysfunctional retail space."],
     tags: ['Unreal', 'Multi-ending', '3D', 'simulation', 'architecture', 'Cumbernauld'],
     link: 'https://renaissancestudios.itch.io/concrete-architects',
     color: 'var(--accent-teal)',
     embed_link: 'https://itch.io/embed/4476181',
+    document_link: '/documents/Concrete_Architects_portfolio.pdf',
     cover: '/cover/game2cover.jpg',
     images: ['/cover/game2cover.jpg', 
              '/cover/game2cover2.png'], 
-    contributions: ['Led the production of the game’s 3D building assets and environmental art.', 'Developed the game’s distinctive monochrome shader in Unreal Engine.', 'Implemented the building logic for the architectural simulation.', 'Optimised assets and integrated art and gameplay systems during team development.', 'Managed the final executable build after merging the team’s work using GitHub.']
+    contributions: ['Led the production of the game’s 3D building assets and environmental art.', 'Developed the game’s distinctive monochrome shader in Unreal Engine.', 'Implemented the building logic for the architectural simulation.', 'Optimised assets and integrated art and gameplay systems during team development.', 'Managed the final executable build after merging the team’s work using GitHub.'], 
+    quick_info: 'Team of 6 · 3D artist, shader & building logic · collaboration with V&A Dundee · 12 weeks'  
   },
   {
     title: "Baby's First Tower Defence",
@@ -49,7 +52,9 @@ const rawGames = [
     link: 'https://colranestudios.itch.io/babys-first-tower-defense',
     color: 'var(--accent-coral)',
     embed_link: 'https://itch.io/embed/4109204',
-    cover: '/cover/game3cover.png'
+    document_link: '/documents/GoodBabies_&_tower_defence_portfolio.pdf',
+    cover: '/cover/game3cover.png', 
+    quick_info: 'Team of 6 · Modular snow fort & school environment · 2 weeks'
   },
   {
     title: 'GoodBabies',
@@ -59,8 +64,11 @@ const rawGames = [
     link: 'https://colranestudios.itch.io/goodbabies',
     color: 'var(--accent-lilac)',
     embed_link: 'https://itch.io/embed/4108940',
+    document_link: '/documents/GoodBabies_&_tower_defence_portfolio.pdf',
     cover: '/cover/game4cover.png',
-    images: ['/cover/game4cover.png', ''],
+    images: ['/cover/game4cover.png', 
+             ''],
+    quick_info: 'Team of 6 · Prop & material artist · first time working with 3ds Max to Unreal pipeline · 10 weeks'
   },
   {
     title: 'From Healthy to Zombie',
@@ -69,7 +77,9 @@ const rawGames = [
     tags: ['Unity', 'Zombie simulation', 'VR', 'shopping'],
     link: 'https://thereisnousername1.itch.io/from-healthy-to-zombie',
     color: 'var(--accent-amber)',
-    embed_link: 'https://itch.io/embed/3513355'
+    embed_link: 'https://itch.io/embed/3513355', 
+    document_link: '/documents/From_healthy_to_zombie_final_report.pdf',
+    quick_info: 'Solo project · Programming oriented · Meta VR · Oct 2024 - May 2025'
   },
   {
     title: 'Timelock',
@@ -77,7 +87,8 @@ const rawGames = [
     tags: ['Unreal', '3D puzzle game', 'time limitation'],
     link: 'https://mockname.itch.io/timelock',
     color: 'var(--accent-teal)',
-    embed_link: 'https://itch.io/embed/3060964'
+    embed_link: 'https://itch.io/embed/3060964', 
+    quick_info: 'Team of 2 · Programmer · 3 months(part-time)'
   },
 ]
 

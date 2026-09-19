@@ -8,7 +8,7 @@ export default function Hero() {
             Looking for a career
           </div>
           <h1>
-            Building games people <span className="accent">wants to play.</span>
+            Building games people <span className="accent">want to play.</span>
           </h1>
           <p className="lead">
             I'm Andy Iu, a game developer who has shipped and prototyped some games and project — from 2.5D puzzler to VR simulation game. This is my portfolio website for what I've built.

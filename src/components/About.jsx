@@ -4,12 +4,13 @@ export default function About() {
       <div className="wrap about-grid">
         <div className="section-head">
           <h2>About</h2>
-          <p>I'm Andy Iu, a game developer specialising in 3D environment art and technical art.</p>
-          <p>I graduated with a BSc (Hons) Computer Science (Games Development) from the University of Plymouth and completed an MProf in Games Development at Abertay University. During my studies, I worked on multiple team projects across Unreal Engine and Unity, taking responsibility for 3D asset production, environment art, shaders, gameplay systems and technical implementation.</p>
-          <p>My main interests are the area between art and technology. I enjoy building 3D assets, optimising them for real-time use, developing materials and shaders in Unreal Engine, and connecting art assets with gameplay and level systems. I also have experience with GitHub-based version control, build integration and working with artists, designers and programmers in team environments.</p>
+          <p>I'm Andy Iu, a game developer who mostly works as a 3D environment and technical artist. I studied Computer Science (Games Development) at Plymouth, then did an MProf at Abertay.</p>
+          <p>I like the part of production where art has to survive inside a real engine. That might mean rebuilding a detailed model to fit a 200-triangle budget, or setting up a master material so the team can change a floor pattern in seconds instead of re-exporting from 3ds Max. On Concrete Architects I made the sketch-style shader and the building placement logic, then merged everyone's work on GitHub and packaged the final build.</p>
           </div>
-        <div><p>I approach projects by looking for practical solutions to production constraints — whether that means reducing asset complexity, building reusable materials and modular assets, or implementing systems that allow the team to iterate more efficiently.</p>
-          <p>I'm currently looking for opportunities as a junior Technical Artist, Environment Artist, or Game Developer, where I can contribute to real-time 3D production while continuing to develop my technical and artistic skills.</p>
+        <div>
+          <p>I enjoy building 3D assets, optimising them for real-time use, and connecting art assets with gameplay and level systems. I also have experience with GitHub-based version control, build integration and working with artists, designers and programmers in team environments.</p>
+          <p>I've worked in teams of 2 to 13, and once with an outside client, V&A Dundee.</p>
+          <p>I'm looking for a junior Technical Artist, Environment Artist or Game Developer role.</p>
           
         </div>
       </div>

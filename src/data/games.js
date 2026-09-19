@@ -23,7 +23,9 @@ const rawGames = [
     embed_link: 'https://itch.io/embed/4698547',
     document_link: '/documents/IuPakHungAndy_DES512_ReflectiveReport.pdf',
     cover: '/cover/game1cover.jpg',
-    images: ['/cover/game1cover.jpg', '/cover/game1cover2.png', '/cover/game1cover3.png'],
+    images: ['/cover/game1cover.jpg', 
+             '/cover/game1cover2.png', 
+             '/cover/game1cover3.png'],
     contributions: ['I created the game’s environment, modelled and optimised all 3D assets.', 'Produced optimised assets with a target of fewer than 200 triangles per object.', 'Developed a reusable Unreal Engine master material with efficient mixed-texture support.', 'Converted a 900,000+ triangle building exterior into low-poly assets with normal mapping.', 'Collaborated with concept artist, animators and level designers to support the game’s visual direction and level integration.']
   },
   {
@@ -35,7 +37,8 @@ const rawGames = [
     color: 'var(--accent-teal)',
     embed_link: 'https://itch.io/embed/4476181',
     cover: '/cover/game2cover.jpg',
-    images: ['/cover/game2cover.jpg', '/cover/game2cover2.png'], 
+    images: ['/cover/game2cover.jpg', 
+             '/cover/game2cover2.png'], 
     contributions: ['Led the production of the game’s 3D building assets and environmental art.', 'Developed the game’s distinctive monochrome shader in Unreal Engine.', 'Implemented the building logic for the architectural simulation.', 'Optimised assets and integrated art and gameplay systems during team development.', 'Managed the final executable build after merging the team’s work using GitHub.']
   },
   {

@@ -15,32 +15,33 @@ function slugify(text) {
 const rawGames = [
   {
     title: 'Hell of a Rescue',
-    pitch: '2.5D fixed view puzzler in an ancient greek styled building within 12 weeks, where I was incharge of 3D art.',
-    description: ["Hell of a Rescue is a groupwork with 12 other teammates. I was incharge of the environmental art(including every 3D static objects in the game) and had a strong collaboration with Euan(concept art + animation + character), Richeng(UI, concept art, character design), Sam(level designer), ZhuoXin(level designer).", "In the development process I have developed the full 3D assets with optimization below 200 triangle counts per each object; a well-written mixed texture loaded master material in Unreal engine that allows us create many textured instances efficiently; high-to-low poly models including a 900000+ triangles building exterior from the American Suerty Building into low-poly model with proper normal mapping to bring most of the detail into our game without performance lost.", ""],
-    tags: ['Unreal', 'Multi-ending', '2.5D', 'Puzzle', 'backroom', 'ancient greek style', 'Rock'],
+    pitch: 'A 2.5D game set in a "corporate hell" 1980s office. Over three levels the player climbs the same skyscraper. The characters are 16-directional sprites, and the environment is 3D.',
+    description: ["Hell of a Rescue is a group project with 12 other teammates. I was in charge of the environmental art including every 3D static objects in the game. The art direction changed several times (Greek-office, then 1990s, then 1980s), and the team capped every object at around 200 triangles. I adapted by rebuilding my detailed office props as low-poly models and baking the lost detail into normal maps. A keyboard dropped from over 12,000 triangles to 92, and a desk from about 600 to 156, while both stayed recognisable on screen.", "I also built a master material with instances, including a scriptable checkerboard floor mat. After players found the original pattern dizzy, it let the team change tiling and colour in about 10 seconds instead of a 30-minute round trip through 3ds Max. My largest asset was the 23-storey American Surety Building. I sculpted it at roughly 1 million triangles, then split it into modular walls of around 200 triangles each with 1024×1024 normal maps. I reused it across all three levels so the player feels they are climbing one building.", ""],
+    tags: ['Unreal', 'Multi-ending', '2.5D', 'Puzzle', 'backroom', 'ancient Greek style', 'Rock'],
     link: 'https://vera-silva.itch.io/hell-of-a-rescue',
     color: 'var(--accent-amber)',
     embed_link: 'https://itch.io/embed/4698547',
     document_link: '/documents/IuPakHungAndy_DES512_ReflectiveReport.pdf',
     cover: '/cover/game1cover.jpg',
     images: ['/cover/game1cover.jpg', '/cover/game1cover2.png', '/cover/game1cover3.png'],
-    contributions: ['Modeled and optimized all 3D environment assets', 'Built a shared texture master material for efficient instancing', 'Reduced a 900k-triangle building to game-ready low-poly with normal mapping','']
+    contributions: ['I created the game’s environment, modelled and optimised all 3D assets.', 'Produced optimised assets with a target of fewer than 200 triangles per object.', 'Developed a reusable Unreal Engine master material with efficient mixed-texture support.', 'Converted a 900,000+ triangle building exterior into low-poly assets with normal mapping.', 'Collaborated with concept artist, animators and level designers to support the game’s visual direction and level integration.']
   },
   {
     title: 'Concrete Architects',
-    pitch: '3D Building simulation game aimed to rebuild Cumbernauld Town Centre with a vintage mono-tone shader within 12 weeks, collaboration with V&A Dundee where I was incharge of art(shader and 3D) and programming(building logic)',
-    description: ["Concrete Architect is a teamwork with other 5 teammates. It was a game project collaborated with V&A Dundee, aimed to attract more local tourist in Dundee DD2 and DD4 district to the museum. We've picked a sketching of the old Cumbernauld Town Centre as our insipiration of the topic.", "The finished game aimed let player go back in time to rebuild the Cumbernauld Town Centre as it was often being critizied for its stark Brutalist architecture, confusing layout, and decline into a dysfunctional retail space. I was incharge of the art deliveries including all 3D building parts and the special monotone shader, also the programming part for the building logic, optimization and compiling the executable after merging.", ""],
+    pitch: 'A building game set in 1960s Cumbernauld Town Centre. The player places interior and exterior buildings on a grid across four floors. Walls generate automatically when the design is submitted, and the layout affects the ending. The visuals mimic a hand-drafted architectural sketch.',
+    description: ["Concrete Architect is a team project with 5 other teammates. It was a game project collaborated with V&A Dundee, aimed at attracting more local tourists in Dundee DD2 and DD4 districts to the museum. We've picked a sketch of the old Cumbernauld Town Centre as our inspiration for the topic.", "I built the sketch-style look by combining an outline shader with four layers of cross-hatching on a yellow-brown paper background. I fixed the shader jitter by turning off anti-aliasing and disabling Nanite on every mesh. I modelled around 20 building types and 7 vehicles from books, photos and archive film, all built to fixed grid dimensions so they snap together. In Unreal Blueprints, I implemented the collision-based checks that decide where each building can be placed. These cover floor limits, entrance connections and overlaps. I also kept the asset list and building dimensions up to date, merged the team's work in GitHub, and packaged builds. At the deadline I worked with a teammate to cut the build size by more than half so we could submit.", "The finished game aimed to let players go back in time to rebuild the Cumbernauld Town Centre, as it was often criticised for its stark Brutalist architecture, confusing layout, and decline into a dysfunctional retail space."],
     tags: ['Unreal', 'Multi-ending', '3D', 'simulation', 'architecture', 'Cumbernauld'],
     link: 'https://renaissancestudios.itch.io/concrete-architects',
     color: 'var(--accent-teal)',
     embed_link: 'https://itch.io/embed/4476181',
     cover: '/cover/game2cover.jpg',
-    images: ['/cover/game2cover.jpg', '/cover/game2cover2.png'],
+    images: ['/cover/game2cover.jpg', '/cover/game2cover2.png'], 
+    contributions: ['Led the production of the game’s 3D building assets and environmental art.', 'Developed the game’s distinctive monochrome shader in Unreal Engine.', 'Implemented the building logic for the architectural simulation.', 'Optimised assets and integrated art and gameplay systems during team development.', 'Managed the final executable build after merging the team’s work using GitHub.']
   },
   {
     title: "Baby's First Tower Defence",
-    pitch: "2 week prototype made in Unreal Engine as part of Abertay University's MProf. A 3D third person shooter where I was incharge of the 3D art(free assets used)",
-    description: ["Baby's First Tower Denfence is a teamwork with 5 other teammates after creation of GoodBabies in the same 12 week cycle. We used a lot of free art assets and reused many assets from prvious game to speed up the creation. I was incharge of the static building like the igloo and the school. The school building is inspired from the Dundee High School.", ""],
+    pitch: "2-week prototype made in Unreal Engine as part of Abertay University's MProf, straight after GoodBabies, and reuses many of that game's assets. It is a 3D third-person shooter where I was in charge of the 3D art (free assets used)",
+    description: ["Baby's First Tower Defence is a teamwork project with 5 other teammates after the creation of GoodBabies in the same 12-week cycle. We used a lot of free art assets and reused many assets from previous games to speed up the creation. I was in charge of the static buildings like the igloo and the school. The school building is inspired by Dundee High School.", "I made the snow fort and the school background. I built the snow fort modularly, with one fixed igloo core and swappable top pieces, plus several staircase variants. That gave the level designer a range of layouts quickly, and let the environment come together within the short schedule."],
     tags: ['Unreal', 'Multiplayer', '3D', '3rd person shooter', 'winter'],
     link: 'https://colranestudios.itch.io/babys-first-tower-defense',
     color: 'var(--accent-coral)',
@@ -49,8 +50,8 @@ const rawGames = [
   },
   {
     title: 'GoodBabies',
-    pitch: "10 week prototype made in Unreal Engine as part of Abertay University's MProf. A simulation game where I was incharge of the 3D art.",
-    description: ["GoodBabies is a teamwork with 5 other teammates. It is a fun project with lots of memes and popular culture references. I was incharge of the creation of 3D objects in the room and the material. It was my first time working with a complete 3Ds Max to Unreal Engine working pipeline and so the final product is not as good as the latter game projects.", "In the project I planned my creation in separate topics for different area of the room. I had my first collaboration with another art related teammate Euan, converting his 2D concept art into 3D assets for our development and working with Mikey to put them into game mechanism. My work was delivered in time and well planned to use all over the game environment.", ""],
+    pitch: `A dark-comedy game where the player sits at a table across from the "Bambino crime family", a mafia of babies. Distraction events pull the player's attention away while a suspicion meter builds. Childlike toys and festive decorations contrast with the criminal setting.`,
+    description: ["GoodBabies is a teamwork project with 5 other teammates. It is a fun project with lots of memes and popular culture references. I was in charge of creating 3D objects for the room and the materials. It was my first time working with a complete 3Ds Max to Unreal Engine pipeline, and so the final product is not as good as the latter game projects.", "I built the props that make the mafia-baby setting work. The distraction objects include a cuckoo clock with a spring-loaded horse head, a modular train set with extra track pieces and a drawer table, a TV set and highchair, and a fly with glowing red eyes. Each one was designed to pull the player's attention away from the table. For the storytelling props, I made the toys, chocolate coins and the rubber duck. I mocked up a shared scale with a biped in 3ds Max and checked every model again in Unreal, which led to five versions of the TV remote. I also set up naming rules and a clear folder structure after early files got messy. My work was delivered on time and well planned to use throughout the game environment.", ""],
     tags: ['Unreal', 'Multi-ending', 'crime', 'card game', 'intense', 'fun'],
     link: 'https://colranestudios.itch.io/goodbabies',
     color: 'var(--accent-lilac)',
@@ -61,7 +62,7 @@ const rawGames = [
   {
     title: 'From Healthy to Zombie',
     pitch: "My bachelor's degree final year project, a Meta VR simulation game",
-    description: ["From Healthy to Zombie is an individual game for my final year project in Bachelor's degree. It was the first time I am incharge of develop individually and delivering a game project in such scale.", "Free art assets including food pack, supermarket with the parking lots and the shopping trolley were used to speed up my creation, so that I can focus on mainly the programming and VR development part. I had developed a working game mechanism for to play with Meta Quest 2 VR device, implemented elements like a basic hand menu, value counter on the trolley UI, movement logic requires only analog stick to perform teleporting, basic enemy AI, an immersive VR video player in Unity, interactive scene transitions to improve player experience.", "The environment setting was experimental for me, it was the first time I am putting shader in use for better visual deliveries. A toon shader is used in the game for most of the objects in static buildings and visually tuned for different daylight setting in a day. I have learned alot from the development as my programming mindset, knowledge to VR development, shader usage, version control and production pipeline, UIUX design has improved alot and supporting my later journey of my Master's degree.", "The game project is not perfect but I did my best at the time. Given another year to improve the game I would put a city view background for immersion, a better trolley physics to encounter lagging, better enemy AI for more challenging gameplay, redesign all 3D art assets for orginality and looking for art style best fit into the game setting, a clear tutorial level for player with instruction, better video recordings of the game for promotion.", ""],
+    description: ["From Healthy to Zombie is an individual game for my final year project in my Bachelor's degree. It was the first time I was in charge of developing and delivering a game project on such a scale.", "Free art assets, including a food pack, supermarket with the parking lots and the shopping trolley, were used to speed up my creation, so that I could focus mainly on the programming and VR development part. I developed a working game mechanism to play with the Meta Quest 2 VR device, implemented elements like a basic hand menu, a value counter on the trolley UI, movement logic that requires only analog stick to perform teleporting, basic enemy AI, an immersive VR video player in Unity, and interactive scene transitions to improve player experience.", "The environment setting was experimental for me; it was the first time I was putting shaders to use for better visual delivery. A toon shader is used in the game for most of the objects in static buildings and is visually tuned for different daylight settings throughout the day. I have learned a lot from the development, as my programming mindset, knowledge of VR development, shader usage, version control and production pipeline, and UI/UX design have improved a lot and supported my later journey of my Master's degree.", "The game project is not perfect, but I did my best at the time. Given another year to improve the game, I would add a city view background for immersion, better trolley physics to avoid lag, better enemy AI for more challenging gameplay, redesign all 3D art assets for originality and looking for art style best fit into the game setting, a clear tutorial level for the player with instructions, and better video recordings of the game for promotion.", ""],
     tags: ['Unity', 'Zombie simulation', 'VR', 'shopping'],
     link: 'https://thereisnousername1.itch.io/from-healthy-to-zombie',
     color: 'var(--accent-amber)',
@@ -69,7 +70,7 @@ const rawGames = [
   },
   {
     title: 'Timelock',
-    pitch: 'My first unreal shipping game for practice.',
+    pitch: 'My first Unreal shipping game for practice.',
     tags: ['Unreal', '3D puzzle game', 'time limitation'],
     link: 'https://mockname.itch.io/timelock',
     color: 'var(--accent-teal)',
@@ -78,3 +79,7 @@ const rawGames = [
 ]
 
 export const games = rawGames.map((g) => ({ ...g, slug: slugify(g.title) }))
+
+
+
+

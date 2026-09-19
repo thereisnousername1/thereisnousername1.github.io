@@ -56,6 +56,14 @@ export default function GameDetail() {
 
         <section className="detail-section">
           <p>"{game.pitch}"</p>
+
+          {game.contributions && game.contributions.length > 0 && (
+                <ul className="cart-contributions">
+                  {game.contributions.map((c, i) => (
+                    <li key={i}><b><i>{c}</i></b></li>
+                  ))}
+                </ul>
+          )}
           
           {/*this way the message will separate in different paragraphs automatically*/}
           {game.description && game.description.length > 0 && (

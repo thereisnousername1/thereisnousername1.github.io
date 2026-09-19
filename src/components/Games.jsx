@@ -30,7 +30,7 @@ export default function Games() {
               {g.contributions && g.contributions.length > 0 && (
                 <ul className="cart-contributions">
                   {g.contributions.map((c, i) => (
-                    <li key={i}>{c}</li>
+                    <li key={i}><b><i>{c}</i></b></li>
                   ))}
                 </ul>
               )}

@@ -68,7 +68,7 @@ const rawGames = [
     embed_link: 'https://itch.io/embed/4108940',
     document_link: '/documents/GoodBabies_&_tower_defence_portfolio.pdf',
     cover: '/cover/game4cover.png',
-    images: ['/cover/game4cover.png', 
+    images: ['/cover/game4cover.png',
              '/cover/game4cover2.png',
              '/cover/game4cover3.png',
              '/cover/game4cover4.png'],

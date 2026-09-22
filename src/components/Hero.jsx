@@ -30,7 +30,7 @@ export default function Hero() {
           </div>
           <div className="row">
             <span>Tools</span>
-            <span>Unreal, Unity, 3Ds Max, Github, Blender(learning)</span>
+            <span>Unreal, Unity, 3Ds Max, Github</span>
           </div>
           <div className="row">
             <span>School</span>

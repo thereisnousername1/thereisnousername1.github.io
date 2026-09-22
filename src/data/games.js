@@ -27,7 +27,7 @@ const rawGames = [
              '/cover/game1cover2.png', 
              '/cover/game1cover3.png'],
     contributions: ['I created the game’s environment, modelled and optimised all 3D assets.', 'Produced optimised assets with a target of fewer than 200 triangles per object.', 'Developed a reusable Unreal Engine master material with efficient mixed-texture support.', 'Converted a 900,000+ triangle building exterior into low-poly assets with normal mapping.', 'Collaborated with concept artist, animators and level designers to support the game’s visual direction and level integration.'], 
-    quick_info: 'Team of 13 · Environment artist · Art direction had turned 3 times · 12 weeks'
+    quick_info: 'Team of 13 · Environment artist · Art direction changed 3 times · 12 weeks'
   },
   {
     title: 'Concrete Architects',
@@ -83,7 +83,7 @@ const rawGames = [
     color: 'var(--accent-amber)',
     embed_link: 'https://itch.io/embed/3513355', 
     document_link: '/documents/From_healthy_to_zombie_final_report.pdf',
-    quick_info: 'Solo project · Programming oriented · Meta VR · Oct 2024 - May 2025'
+    quick_info: 'Solo project · Programmer · VR · Oct 2024 - May 2025'
   },
   {
     title: 'Timelock',

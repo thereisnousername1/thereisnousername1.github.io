@@ -25,7 +25,8 @@ const rawGames = [
     cover: '/cover/game1cover.jpg',
     images: ['/cover/game1cover.jpg', 
              '/cover/game1cover2.png', 
-             '/cover/game1cover3.png'],
+             '/cover/game1cover3.png',
+            '/cover/game1cover4.png'],
     contributions: ['I created the game’s environment, modelled and optimised all 3D assets.', 'Produced optimised assets with a target of fewer than 200 triangles per object.', 'Developed a reusable Unreal Engine master material with efficient mixed-texture support.', 'Converted a 900,000+ triangle building exterior into low-poly assets with normal mapping.', 'Collaborated with concept artist, animators and level designers to support the game’s visual direction and level integration.'], 
     quick_info: 'Team of 13 · Environment artist · Art direction changed 3 times · 12 weeks'
   },
